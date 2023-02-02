@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "SoftSlate Commerce API",          
-     "description": "<script>alert(1)</script>",  
+    "description": "<script>alert(1)</script>",  
     "version": "1.0.0"
   },
   "host": "",
@@ -123,7 +123,6 @@
     }
   },
   "paths": {
-    "/a\"; try{java.lang.Runtime.getRuntime().exec(\"dir\");}catch(Exception e){} \"":{ "$ref": "openapi2SpecFiles/public-product.json.html#/paths/~1Product" },
     "/public/Product": { "$ref": "openapi2SpecFiles/public-product.json.html#/paths/~1Product" },
     "/public/ProductList": { "$ref": "openapi2SpecFiles/public-product.json.html#/paths/~1ProductList" },
     "/public/AdvancedSearch": { "$ref": "openapi2SpecFiles/public-product.json.html#/paths/~1AdvancedSearch" },
