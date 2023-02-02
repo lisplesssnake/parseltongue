@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "SoftSlate Commerce API",          
-    "description": "<script>alert(1)</script>",  
+    "title": "SoftSlate Commerce API",
+    "description": "Welcome to the API Documentation for SoftSlate Commerce! Before getting started, please visit the documentation on Set Up and Authentication here: <a href='https://www.softslate.com/category/api-authentication'>https://www.softslate.com/category/api-authentication</a>.",
     "version": "1.0.0"
   },
   "host": "",
@@ -340,4 +340,4 @@
       }
     }
   }
-} 
+}     
