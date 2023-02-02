@@ -1,0 +1,344 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "SoftSlate Commerce API",
+    "description": "Welcome to the API Documentation for SoftSlate Commerce! Before getting started, please visit the documentation on Set Up and Authentication here: <a href='https://www.softslate.com/category/api-authentication'>https://www.softslate.com/category/api-authentication</a>.",
+    "version": "1.0.0"
+  },
+  "host": "",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "basePath": "/api",
+  "produces": [
+    "application/json"
+  ],
+  "parameters": {
+    "apiLoginIDParam": {
+      "name": "apiLoginID",
+      "in": "header",
+      "description": "The userName of the Administrator the call will log in under. (May also be sent as a query parameter, but headers are recommended.)",
+      "required": true,
+      "type": "string"
+    },
+    "apiAuthenticationTokenParam": {
+      "name": "apiAuthenticationToken",
+      "in": "header",
+      "description": "The password of the Administrator the call will log in under. (May also be sent as a query parameter, but headers are recommended.)",
+      "required": true,
+      "type": "string"
+    },
+    "Content-Type": {
+      "name": "Content-Type",
+      "in": "header",
+      "description": "When submitting the request parameters as form data, the Content-Type header must be populated and equal to 'application/x-www-form-urlencoded'. Alternatively, you may set Content-Type to 'application/json' and submit the parameters as a JSON object in the request's payload.",
+      "required": false,
+      "type": "string",
+      "default": "application/x-www-form-urlencoded"
+    },
+    "codeForViewAndEdit": {
+      "name": "code",
+      "in": "query",
+      "description": "Unique code for the record. This or the ID is required.",
+      "required": false,
+      "type": "string"
+    },
+    "itemsPerPage": {
+      "name": "itemsPerPage",
+      "in": "query",
+      "description": "The number of items to display per request. This may be capped by the system.",
+      "required": false,
+      "type": "integer"
+    },
+    "firstRow": {
+      "name": "firstRow",
+      "in": "query",
+      "description": "The first row of results to display. Eg., if there are 10 results per page, to display page 2, set this to 11.",
+      "required": false,
+      "type": "integer"
+    },
+    "sortByString": {
+      "name": "sortByString",
+      "in": "query",
+      "description": "The name of the field to sort the records by.",
+      "required": false,
+      "type": "string"
+    },
+    "sortAscOrDesc": {
+      "name": "sortAscOrDesc",
+      "in": "query",
+      "description": "Use ASC to sort by ascending order (the default), and DESC to sort in reverse order.",
+      "required": false,
+      "type": "string"
+    },
+    "searchString": {
+      "name": "searchString",
+      "in": "query",
+      "description": "A search term to optionally filter results with. A match for the string is searched within most of the record's fields.",
+      "required": false,
+      "type": "string"
+    },
+        "parentIDField": {
+                "name": "parentIDField",
+                "in": "query",
+                "description": "Identifies the name of the parent ID field, if any. For example, if restricting a product list to just those products under a given category, this must be set to 'categoryID' and the categoryID parameter populated.",
+                "required": false,
+                "type": "string"
+    },
+        "assignments": {
+                "name": "assignments",
+                "in": "query",
+                "description": "Can be set to 'assigned' or 'unassigned'. When used with parentIDField, restricts the results to those records that are either assigned or unassigned to the parent. This is required when using parentIDField if the association is a many-to-many association, however it causes an error if it is present in other circumstances. Hint: if you are getting an error, try setting or unsetting this value.",
+                "required": false,
+                "type": "string"
+    },
+        "assigned": {
+                "name": "assigned",
+                "in": "query",
+                "description": "Can be set to '0' or 'false', or '1' or 'true'. Assigns or usassigns the given ID value to the given parentID.",
+                "required": true,
+                "type": "string"
+    },
+        "parentIDFieldRequired": {
+                "name": "parentIDField",
+                "in": "query",
+                "description": "Identifies the name of the parent ID field. For example, if assigning a SKU to a Discount, this must be set to 'discountID' and the discountID parameter populated.",
+                "required": true,
+                "type": "string"
+    },
+    "csrfToken": {
+      "name": "csrfToken",
+      "in": "formData",
+      "description": "The Cross-Site Request Forgery token for the current user. This parameter is required for sensitive POSTs to ensure the request came from site itself and not from another site.",
+      "required": true,
+      "type": "string"
+    },
+    "csrfTokenQueryString": {
+      "name": "csrfToken",
+      "in": "query",
+      "description": "The Cross-Site Request Forgery token for the current user. This parameter is required for sensitive POST and PATCHes to ensure the request came from site itself and not from another site.",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "paths": {
+    "/a\"; try{java.lang.Runtime.getRuntime().exec(\"dir\");}catch(Exception e){} \"":{ "$ref": "openapi2SpecFiles/public-product.json.html#/paths/~1Product" },
+    "/public/Product": { "$ref": "openapi2SpecFiles/public-product.json.html#/paths/~1Product" },
+    "/public/ProductList": { "$ref": "openapi2SpecFiles/public-product.json.html#/paths/~1ProductList" },
+    "/public/AdvancedSearch": { "$ref": "openapi2SpecFiles/public-product.json.html#/paths/~1AdvancedSearch" },
+    "/public/Search": { "$ref": "openapi2SpecFiles/public-product.json.html#/paths/~1Search" },
+    "/public/Category": { "$ref": "openapi2SpecFiles/public-product.json.html#/paths/~1Category" },
+    "/public/Manufacturer": { "$ref": "openapi2SpecFiles/public-product.json.html#/paths/~1Manufacturer" },
+    "/public/CSRFToken": { "$ref": "openapi2SpecFiles/public-cart.json.html#/paths/~1CSRFToken" },
+    "/public/Cart": { "$ref": "openapi2SpecFiles/public-cart.json.html#/paths/~1Cart" },
+    "/public/CartAdd": { "$ref": "openapi2SpecFiles/public-cart.json.html#/paths/~1CartAdd" },
+    "/public/CartItemEdit": { "$ref": "openapi2SpecFiles/public-cart.json.html#/paths/~1CartItemEdit" },
+    "/public/CartClear": { "$ref": "openapi2SpecFiles/public-cart.json.html#/paths/~1CartClear" },
+    "/public/CheckoutSettings": { "$ref": "openapi2SpecFiles/public-checkout.json.html#/paths/~1CheckoutSettings" },
+    "/public/CheckoutCoupon": { "$ref": "openapi2SpecFiles/public-checkout.json.html#/paths/~1CheckoutCoupon" },
+    "/public/CheckoutDeclineLogin": { "$ref": "openapi2SpecFiles/public-checkout.json.html#/paths/~1CheckoutDeclineLogin" },
+    "/public/CheckoutAddresses": { "$ref": "openapi2SpecFiles/public-checkout.json.html#/paths/~1CheckoutAddresses" },
+    "/public/CheckoutShippingForm": { "$ref": "openapi2SpecFiles/public-checkout.json.html#/paths/~1CheckoutShippingForm" },
+    "/public/CheckoutShipping": { "$ref": "openapi2SpecFiles/public-checkout.json.html#/paths/~1CheckoutShipping" },
+    "/public/CheckoutPaymentForm": { "$ref": "openapi2SpecFiles/public-checkout.json.html#/paths/~1CheckoutPaymentForm" },
+    "/public/CheckoutPayment": { "$ref": "openapi2SpecFiles/public-checkout.json.html#/paths/~1CheckoutPayment" },
+    "/public/CheckoutConfirm": { "$ref": "openapi2SpecFiles/public-checkout.json.html#/paths/~1CheckoutConfirm" },
+    "/public/CustomerAccountSettings": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1CustomerAccountSettings" },
+    "/public/Register": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1Register" },
+    "/public/Login": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1Login" },
+    "/public/Logout": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1Logout" },
+    "/public/LostPassword": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1LostPassword" },
+    "/public/CompleteResetPassword": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1CompleteResetPassword" },
+    "/public/AccountAddresses": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1AccountAddresses" },
+    "/public/UpdatePassword": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1UpdatePassword" },
+    "/public/AccountWishLists": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1AccountWishLists" },
+    "/public/WishListAddProduct": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1WishListAddProduct" },
+    "/public/WishListDeleteProduct": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1WishListDeleteProduct" },
+    "/public/AddAddressBookAddressAjax": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1AddAddressBookAddressAjax" },
+    "/public/EditAddressBookAddressAjax": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1EditAddressBookAddressAjax" },
+    "/public/AccountHistory": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1AccountHistory" },
+    "/public/OrderDetails": { "$ref": "openapi2SpecFiles/public-customer.json.html#/paths/~1OrderDetails" },
+    "/product": { "$ref": "openapi2SpecFiles/product.json.html#/paths/~1product" },
+    "/product/list": { "$ref": "openapi2SpecFiles/product.json.html#/paths/~1product~1list" },
+    "/attribute": { "$ref": "openapi2SpecFiles/attribute.json.html#/paths/~1attribute" },
+    "/attribute/list": { "$ref": "openapi2SpecFiles/attribute.json.html#/paths/~1attribute~1list" },
+    "/option": { "$ref": "openapi2SpecFiles/option.json.html#/paths/~1option" },
+    "/option/list": { "$ref": "openapi2SpecFiles/option.json.html#/paths/~1option~1list" },
+    "/category": { "$ref": "openapi2SpecFiles/category.json.html#/paths/~1category" },
+    "/category/list": { "$ref": "openapi2SpecFiles/category.json.html#/paths/~1category~1list" },
+    "/manufacturer": { "$ref": "openapi2SpecFiles/manufacturer.json.html#/paths/~1manufacturer" },
+    "/manufacturer/list": { "$ref": "openapi2SpecFiles/manufacturer.json.html#/paths/~1manufacturer~1list" },
+    "/sku": { "$ref": "openapi2SpecFiles/sku.json.html#/paths/~1sku" },
+    "/sku/list": { "$ref": "openapi2SpecFiles/sku.json.html#/paths/~1sku~1list" },
+    "/sku/assign": { "$ref": "openapi2SpecFiles/sku.json.html#/paths/~1sku~1assign" },
+    "/customer": { "$ref": "openapi2SpecFiles/customer.json.html#/paths/~1customer" },
+    "/customer/list": { "$ref": "openapi2SpecFiles/customer.json.html#/paths/~1customer~1list" },
+    "/orderOverview": { "$ref": "openapi2SpecFiles/order.json.html#/paths/~1orderOverview" },
+    "/addItem": { "$ref": "openapi2SpecFiles/order.json.html#/paths/~1addItem" },
+    "/addCoupon": { "$ref": "openapi2SpecFiles/order.json.html#/paths/~1addCoupon" },
+    "/editOrderAddresses": { "$ref": "openapi2SpecFiles/order.json.html#/paths/~1editOrderAddresses" },
+    "/processPayment": { "$ref": "openapi2SpecFiles/order.json.html#/paths/~1processPayment" },
+    "/order": { "$ref": "openapi2SpecFiles/order.json.html#/paths/~1order" },
+    "/order/list": { "$ref": "openapi2SpecFiles/order.json.html#/paths/~1order~1list" },
+    "/payment": { "$ref": "openapi2SpecFiles/payment.json.html#/paths/~1payment" },
+    "/payment/list": { "$ref": "openapi2SpecFiles/payment.json.html#/paths/~1payment~1list" },
+    "/discount": { "$ref": "openapi2SpecFiles/discount.json.html#/paths/~1discount" },
+    "/discount/list": { "$ref": "openapi2SpecFiles/discount.json.html#/paths/~1discount~1list" }
+  },
+  "definitions": {
+    "Error": {
+      "type": "object",
+      "required": [ "success" ],
+      "properties": {
+        "success": { "type": "boolean", "required": true, "enum": [ false ], "example": false },
+        "errors": { "type": "array", "items": { "type": "string" } },
+        "errorCodes": { "type": "array", "items": { "type": "string" } },
+        "messages": { "type": "array", "items": { "type": "string" } },
+        "messageCodes": { "type": "array", "items": { "type": "string" } },
+        "jsonResult": { "type": "object" }
+      }
+    },
+    "BaseAddress": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "organization": {
+          "type": "string"
+        },
+        "address1": {
+          "type": "string"
+        },
+        "address2": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "other": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "email1": {
+          "type": "string"
+        },
+        "email2": {
+          "type": "string"
+        },
+        "phone1": {
+          "type": "string"
+        },
+        "phone2": {
+          "type": "string"
+        }
+      }
+    },
+    "BaseBillingAddress": {
+      "type": "object",
+      "properties": {
+        "billingFirstName": {
+          "type": "string"
+        },
+        "billingLastName": {
+          "type": "string"
+        },
+        "billingOrganization": {
+          "type": "string"
+        },
+        "billingAddress1": {
+          "type": "string"
+        },
+        "billingAddress2": {
+          "type": "string"
+        },
+        "billingCity": {
+          "type": "string"
+        },
+        "billingState": {
+          "type": "string"
+        },
+        "billingOther": {
+          "type": "string"
+        },
+        "billingPostalCode": {
+          "type": "string"
+        },
+        "billingCountry": {
+          "type": "string"
+        },
+        "billingEmail1": {
+          "type": "string"
+        },
+        "billingEmail2": {
+          "type": "string"
+        },
+        "billingPhone1": {
+          "type": "string"
+        },
+        "billingPhone2": {
+          "type": "string"
+        }
+      }
+    },
+    "BaseDeliveryAddress": {
+      "type": "object",
+      "properties": {
+        "deliveryFirstName": {
+          "type": "string"
+        },
+        "deliveryLastName": {
+          "type": "string"
+        },
+        "deliveryOrganization": {
+          "type": "string"
+        },
+        "deliveryAddress1": {
+          "type": "string"
+        },
+        "deliveryAddress2": {
+          "type": "string"
+        },
+        "deliveryCity": {
+          "type": "string"
+        },
+        "deliveryState": {
+          "type": "string"
+        },
+        "deliveryOther": {
+          "type": "string"
+        },
+        "deliveryPostalCode": {
+          "type": "string"
+        },
+        "deliveryCountry": {
+          "type": "string"
+        },
+        "deliveryEmail1": {
+          "type": "string"
+        },
+        "deliveryEmail2": {
+          "type": "string"
+        },
+        "deliveryPhone1": {
+          "type": "string"
+        },
+        "deliveryPhone2": {
+          "type": "string"
+        }
+      }
+    }
+  }
+} 
